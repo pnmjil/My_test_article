@@ -1,16 +1,27 @@
-# What is man
+# Commonly Used Linux Commands
 
-O.M. He observes a smell, he infers a cheese, he seeks and finds. The
-astronomer observes this and that; adds his this and that to the
-this-and-thats of a hundred predecessors, infers an invisible planet,
-seeks it and finds it. The rat gets into a trap; gets out with trouble;
-infers that cheese in traps lacks value, and meddles with that trap no
-more. The astronomer is very proud of his achievement, the rat is proud
-of his. Yet both are machines; they have done machine work, they have
-originated nothing, they have no right to be vain; the whole credit
-belongs to their Maker. They are entitled to no honors, no praises, no
-monuments when they die, no remembrance. One is a complex and elaborate
-machine, the other a simple and limited machine, but they are alike in
-principle, function, and process, and neither of them works otherwise
-than automatically, and neither of them may righteously claim a
-_personal _superiority or a personal dignity above the other.
+Here's a clean and practical list of Common Linux Commands for Rocky Linux (and most Linux distributions):
+
+## 1. Navigation Commands
+
+| Command  | Description                     |
+| -------- | ------------------------------- |
+| pwd      | Show current directory          |
+| ls       | List files and folders          |
+| ls -la   | List all files including hidden |
+| cd /path | Change directory                |
+| cd ~     | Go to home directory            |
+| cd -     | Go back to previous directory   |
+
+## 2. File & Folder Management
+
+| Command               | Description                |
+| --------------------- | -------------------------- |
+| mkdir <folder_name >  | Create a new folder        |
+| touch <filename.txt>  | Create an empty file       |
+| cp file1 file2        | Copy file                  |
+| cp -r folder1 folder2 | Copy folder recursively    |
+| mv oldname newname    | Move or rename file/folder |
+| rm filename           | Delete file                |
+| rm -r foldername      | Delete folder and contents |
+| rm -rf foldername     |                            |
