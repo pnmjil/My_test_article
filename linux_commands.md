@@ -4,39 +4,48 @@ Here's a clean and practical list of Common Linux Commands for Rocky Linux (and 
 
 ## 1. Navigation Commands
 
-| Command  | Description                     |
-| -------- | ------------------------------- |
-| pwd      | Show current directory          |
-| ls       | List files and folders          |
-| ls -la   | List all files including hidden |
-| cd /path | Change directory                |
-| cd ~     | Go to home directory            |
-| cd -     | Go back to previous directory   |
+| Command  | Description                           |
+| -------- | ------------------------------------- |
+| pwd      | Show current directory                |
+| ls       | List files and folders                |
+| ls -la   | List all files including hidden       |
+| cd /path | Change directory                      |
+| cd ~     | Go to home directory                  |
+| cd ..    | Go back to previous directory         |
+| tree     | Display directory tree (if installed) |
+| ls -l    | Long listing                          |
 
 ## 2. File & Folder Management
 
 | Command               | Description                  |
 | --------------------- | ---------------------------- |
-| mkdir <folder_name >  | Create a new folder          |
-| touch <filename.txt>  | Create an empty file         |
+| mkdir folder_name     | Create a new folder          |
+| touch  filename.txt   | Create an empty file         |
 | cp file1 file2        | Copy file                    |
 | cp -r folder1 folder2 | Copy folder recursively      |
 | mv oldname newname    | Move or rename file/folder   |
 | rm filename           | Delete file                  |
 | rm -r foldername      | Delete folder and contents   |
 | rm -rf foldername     | Force delete (use carefully) |
+| cp -r dir1 dir2       | Copy directory               |
+| rmdir folder          | Remove empty directory       |
+| mkdir -p a/b/c        | Create nested directories    |
 
 ## 3. Viewing & Editing Files
 
-| Command       | Description                |
-| ------------- | -------------------------- |
-| cat filename  | Display file content       |
-| less filename | View file page by page     |
-| nano filename | Edit file with Nano editor |
-| vim filename  | Edit with Vim (advanced)   |
-| head filename | Show first 10 lines        |
-| tail filename | Show last 10 lines         |
-| tail -f file  | Live view (log files)      |
+| Command         | Description                |
+| --------------- | -------------------------- |
+| cat filename    | Display file content       |
+| less filename   | View file page by page     |
+| nano filename   | Edit file with Nano editor |
+| vim filename    | Edit with Vim (advanced)   |
+| head filename   | Show first 10 lines        |
+| tail filename   | Show last 10 lines         |
+| tail -f file    | Live view (log files)      |
+| more file       | View file                  |
+| head -20 file   | First 20 lines             |
+| tail -f logfile | Follow log updates         |
+| nl file         | Show line numbers          |
 
 ## 4. System Information
 
@@ -70,21 +79,32 @@ Here's a clean and practical list of Common Linux Commands for Rocky Linux (and 
 
 ## 7. Network Commands
 
-| Command         | Description       |
-| --------------- | ----------------- |
-| ip addr         | Show IP address   |
-| ping google.com | Test connectivity |
-| curl google.com | Fetch web page    |
-| wget url        | Download file     |
+| Command             | Description          |
+| ------------------- | -------------------- |
+| ip addr             | Show IP address      |
+| ping google.com     | Test connectivity    |
+| curl google.com     | Fetch web page       |
+| wget url            | Download file        |
+| ip r                | Show routes          |
+| hostname            | Show hostname        |
+| ss -tulnp           | Show listening ports |
+| dig domain.com      | DNS lookup           |
+| nslookup domain.com | DNS query            |
+| traceroute host     | Trace route          |
 
 ## 8. Search & Find
 
-| Command              | Description                  |
-| -------------------- | ---------------------------- |
-| grep "text" filename | Search text in file          |
-| grep -r "text" /path | Recursive search             |
-| find / -name "*.txt" | Find files by name           |
-| locate filename      | Fast search (needs updatedb) |
+| Command              | Description                   |
+| -------------------- | ----------------------------- |
+| grep "text" filename | Search text in file           |
+| grep -r "text" dir   | Recursive search              |
+| find / -name "*.txt" | Find files by name            |
+| find . -type f       | Find files                    |
+| find . -type d       | Find directors                |
+| which command        | Show executable location      |
+| locate filename      | Fast search (needs updatedb)  |
+| whereis command      | Find binary, source, man page |
+| grep -i "text"       | Ignore case                   |
 
 ## 9. Archive & Compression
 
@@ -107,11 +127,11 @@ Here's a clean and practical list of Common Linux Commands for Rocky Linux (and 
 
 ## 11. Git Commands
 
-| Command              | Description       |
-| -------------------- | ----------------- |
-| git clone url        | Clone repository  |
-| git status           | Check status      |
-| git add .            | Stage all changes |
-| git commit -m "msg"  | Commit changes    |
-| git push origin main | Push to GitHub    |
-| git pull             |                   |
+| Command              | Description         |
+| -------------------- | ------------------- |
+| git clone url        | Clone repository    |
+| git status           | Check status        |
+| git add .            | Stage all changes   |
+| git commit -m "msg"  | Commit changes      |
+| git push origin main | Push to GitHub      |
+| git pull             | Pull latest changes |
